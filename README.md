@@ -1,4 +1,4 @@
-# Group YY - {Short snappy Title of your project}
+# Group 07 - {Optimization of Data Scientist's Job Field}
 
 - Your title can change over time.
 
@@ -8,17 +8,23 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## Describe your topic/interest in about 150-200 words
 
-{Add your stuff here}
+{Our overall interest is the optimization of our job style for the future to earn a higher salary through analysis of salary data of workers in data science related fields. To break down this huge question into smaller pieces, we have formed our research questions based on our individual interest in this dataset. 
+One of them is the effectiveness of remote working. Remote working is one of the huge advances produced by modern technology, but its effectiveness is still under research. Through this research, we may produce the relevance of salary and remote working, and moreover, acknowledgement about the skill we should gain before working in industries in order to be better adapted to remote working.
+Second one is the different salary levels based on the company size. We are interested in this because as data science students, we want to gain insight into different salary levels for each company size so that it will help me when choosing my career path.
+Lastly, our team would also like to see how salary levels differ in different countries. Although several factors contribute to how much a worker is paid, we would like to see which countries pay a worker more than the other. This information could benefit many data science major students, providing them with examples of career paths in different countries. 
+}
 
 ## Describe your dataset in about 150-200 words
 
-{Add your stuff here}
+{This dataset consists of various information in relation to different data science jobs including their work year, experience level, employment type, job title, salary in different currencies, employee residence, and the remote ratio. Our team has cited this dataset from Kaggle, and the data is collected from 2020 to 2022. It was collected by a dataset grandmaster on kaggle. The purpose of the data collection was not mentioned within the dataset. 
+Our overall speculation of this dataset is that several factors, such as company location and the size of the company influence the salary level. Specifically, our team formed an assumption that certain locations of the company positively influence the salary level. We also conjecture that the company size and the salary level has a positive relationship. In contrast, we forecast that there are factors that have an indirect relation to salary such as remote working. 
+}
 
 ## Team Members
 
-- Person 1: one sentence about you!
-- Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Taii: I like volleyball
+- Koko: I like cats
+- Yuki: I like rugby
 
 ## Images
 
@@ -28,7 +34,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## References
 
-{Add your stuff here}
+{https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries}
 
 
 
