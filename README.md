@@ -2,7 +2,9 @@
 
 ## Milestones
 
-Details for Milestone are available on Canvas (left sidebar, Course Project).
+Milestone 1: In this milestone you will be expected to choose a dataset appropriate for the DATA 301 project. The most important task for this milestone is to select an appropriate dataset.
+
+Milestone 2: In this milestone you will be expected to explain your dataset (source, columns, general explanation of your dataset) and come up with research questions.
 
 ## Describe your topic/interest in about 150-200 words
 
@@ -32,7 +34,7 @@ Our overall speculation of this dataset is that several factors, such as company
 
 ## References
 
-{https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries}
+https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 
 
 
