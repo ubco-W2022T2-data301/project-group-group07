@@ -6,6 +6,13 @@ Milestone 1: In this milestone you will be expected to choose a dataset appropri
 
 Milestone 2: In this milestone you will be expected to explain your dataset (source, columns, general explanation of your dataset) and come up with research questions.
 
+Milestone 3: In this milestone you will be expected to process and clean your dataset, do exploratory data analysis (EDA).
+
+Milestone 4: In this milestone you will be expected to create some data visualizations, and work with method chaining in Pandas. 
+
+Milestone 5: In this milestone you will be finalizing your submission and presenting all your hard-work to your fellow students as a Dashboard.
+
+
 ## Describe your topic/interest in about 150-200 words
 
 Our overall interest is the optimization of our job style for the future to earn a higher salary through analysis of salary data of workers in data science related fields. To break down this huge question into smaller pieces, we have formed our research questions based on our individual interest in this dataset. 
