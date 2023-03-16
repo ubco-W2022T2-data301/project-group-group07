@@ -116,7 +116,7 @@ def extract_match(data=None, col=None, lst=None):
 
 
 def count_category_groupby(data=None, column1=None, column2=None, 
-                        order_column1=None, order_column2=None):
+                           order_column1=None, order_column2=None):
     """
     This function counts the number of elements of unique elements of column2 within the unique elements in column1. 
 
@@ -124,35 +124,36 @@ def count_category_groupby(data=None, column1=None, column2=None,
         data: Dataframe, default:None
             Dataframe to be considered. 
         column1: String, default:None
-            Column name to be grouped by on columns. 
+            Column name to be grouped by on rows. 
         column2: String, default:None
-            Column name to be grouped by on rows.
-        order_column1: list of String, default:None
+            Column name to be grouped by on columns.
+        order_column1: list of String, optional, default:None
             List of unique elements in column1.  
-            Columns are ordered as specified. 
-        order_column2: list of String, default:None
-            List of unique elements in column2.  
             Rows are ordered as specified. 
+        order_column2: list of String, optional, default:None
+            List of unique elements in column2.  
+            Columns are ordered as specified. 
 
     Returns:
         merged_df: Dataframe
-            Dataframe of number of elements of unique elements in column2 versus unique elements in column1. 
+            Dataframe of number of elements of unique elements in column1 versus unique elements in column2. 
             The rows and columns are ordered as specified. 
     """
     list_df = list()
-    for i in data[column1].unique():
-        df = count_category(data = data[data[column1] == i], column = column2).rename(columns={'count':i})
+    for i in data[column2].unique():
+        df = count_category(data = data[data[column2] == i], column = column1).rename(columns={'count':i})
         list_df.append(df)
         
     merged_df = list_df[0]
     for i in list_df[1:]:
         merged_df = pd.merge(merged_df, i, how='outer')
     
+    
     merged_df = (
-        merged_df.set_index(keys=column2)
-                .reindex(index=order_column2)
-                .reindex(columns=order_column1)
-                .reset_index()
+        merged_df.set_index(keys=column1)
+                 .reindex(index=order_column1)
+                 .reindex(columns=order_column2)
+                 .reset_index()
     )
     return merged_df
 
