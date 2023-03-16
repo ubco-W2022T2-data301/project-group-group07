@@ -6,7 +6,6 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-
 def processed_df(): 
     """
     This function loads a dataset with salary integrated to usd. 
@@ -18,7 +17,7 @@ def processed_df():
     df = pd.read_csv('../data/processed/ds_salaries_1.csv')
     df = (
         df.drop(columns={'salary', 'salary_currency'})
-          .rename(columns = {'salary_in_usd':'salary'})
+        .rename(columns = {'salary_in_usd':'salary'})
     )
     return df
 
@@ -58,7 +57,7 @@ def boxplot(data=None, x=None, y=None, hue=None, order=None, hue_order=None,
     plt.clf()
     plot = (
         sns.boxplot(data = data, x = x, y = y, hue=hue, order=order, hue_order=hue_order)
-           .set(title = title, xlabel = xlabel, ylabel = ylabel)       
+        .set(title = title, xlabel = xlabel, ylabel = ylabel)       
     )
     plt.figure(figsize=(6.4, 4.8)) # restore default value
     return plot
@@ -117,7 +116,7 @@ def extract_match(data=None, col=None, lst=None):
 
 
 def count_category_groupby(data=None, column1=None, column2=None, 
-                           order_column1=None, order_column2=None):
+                        order_column1=None, order_column2=None):
     """
     This function counts the number of elements of unique elements of column2 within the unique elements in column1. 
 
@@ -151,9 +150,9 @@ def count_category_groupby(data=None, column1=None, column2=None,
     
     merged_df = (
         merged_df.set_index(keys=column2)
-                 .reindex(index=order_column2)
-                 .reindex(columns=order_column1)
-                 .reset_index()
+                .reindex(index=order_column2)
+                .reindex(columns=order_column1)
+                .reset_index()
     )
     return merged_df
 
