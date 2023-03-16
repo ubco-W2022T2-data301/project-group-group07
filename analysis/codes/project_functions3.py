@@ -84,10 +84,12 @@ def count_category(data=None, column=None, ascending = False):
     df = (
         data.groupby(column)
             .count()
-            .rename(columns = {data.columns[0]:'count'})
-            .sort_values('count',ascending = ascending)
-            .iloc[:,:1]
-            .reset_index()
+    )    
+    df = (
+        df.rename(columns = {df.columns[0]:'count'})
+          .sort_values('count',ascending = ascending)
+          .iloc[:,:1]
+          .reset_index()
     )
     return df
 
@@ -158,3 +160,51 @@ def count_category_groupby(data=None, column1=None, column2=None,
     return merged_df
 
 
+def count_melt(data=None, column1=None, column2=None, 
+               order_column1=None, order_column2=None, ):
+    """
+    This function creates melt version of count_category_groupby(). 
+
+    Args:
+        data: Dataframe, default:None
+            Dataframe to be considered. 
+        column1: String, default:None
+            Column name to be grouped by on second column. 
+        column2: String, default:None
+            Column name to be grouped by on first column.
+        order_column1: list of String, optional, default:None
+            List of unique elements in column1.  
+            second column is ordered as specified. 
+        order_column2: list of String, optional, default:None
+            List of unique elements in column2.  
+            Columns are ordered as specified. 
+    """
+    df = count_category_groupby(data, column2, column1, order_column2, order_column1)
+    df = (
+        pd.melt(df, id_vars=[column2])
+          .rename(columns = {'variable':column1, 'value':'count'})
+          .reindex(columns = [column1, column2, 'count'])
+    )
+    return df
+
+
+def mean_category(data=None, column=None):
+    """
+    This function counts the number of rows of each unique element within the specified column. 
+    
+    Args:
+        data: Dataframe, default:None
+            Dataframe to be consedered in counting. 
+        column: String, default:None
+            Column that is grouped by and calculated mean of unique elements. 
+
+    Returns:
+        df: Dataframe
+            Dataframe for each item in specified group and the number of corresponding elements. 
+    """
+    df = (
+        data.groupby(column)
+            .mean()
+            .reset_index()
+    )
+    return df
