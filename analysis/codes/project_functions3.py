@@ -6,6 +6,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
+
 def processed_df(): 
     """
     This function loads a dataset with salary integrated to usd. 
@@ -63,6 +64,29 @@ def boxplot(data=None, x=None, y=None, hue=None, order=None, hue_order=None,
     return plot
 
 
+def extract_match(data=None, col=None, lst=None):
+    """
+    This function extracts the rows that matches any of the elements in lst within specified column. 
+
+    Args:
+        data: Dataframe, default:None
+            Dataframe to be extracted from. 
+        col: String, default:None
+            Name of the column to be considered in finding matches
+        lst: list of Strings, default:None
+            List of elements to be matched with. 
+            Rows that match with any elements in this list will be included in the output. 
+    Returns:
+        df: Dataframe
+            Dataframe that only holds the matched columns. 
+    """
+    
+    df = (
+        data[data[col].isin(lst)].reset_index(drop = True)
+    )
+    return df
+
+
 def count_category(data=None, column=None, ascending = False):
     """
     This function counts the number of rows of each unique element within the specified column. 
@@ -90,29 +114,6 @@ def count_category(data=None, column=None, ascending = False):
           .sort_values('count',ascending = ascending)
           .iloc[:,:1]
           .reset_index()
-    )
-    return df
-
-
-def extract_match(data=None, col=None, lst=None):
-    """
-    This function extracts the rows that matches any of the elements in lst within specified column. 
-
-    Args:
-        data: Dataframe, default:None
-            Dataframe to be extracted from. 
-        col: String, default:None
-            Name of the column to be considered in finding matches
-        lst: list of Strings, default:None
-            List of elements to be matched with. 
-            Rows that match with any elements in this list will be included in the output. 
-    Returns:
-        df: Dataframe
-            Dataframe that only holds the matched columns. 
-    """
-    
-    df = (
-        data[data[col].isin(lst)].reset_index(drop = True)
     )
     return df
 
@@ -208,3 +209,81 @@ def mean_category(data=None, column=None):
             .reset_index()
     )
     return df
+
+def mean_category_groupby(data=None, column1=None, column2=None, column3=None,
+                           order_column1=None, order_column2=None):
+    """
+    This function calculates the mean of elements in unique elements of column2 within the unique elements in column1. 
+
+    Args:
+        data: Dataframe, default:None
+            Dataframe to be considered. 
+        column1: String, default:None
+            Column name to be grouped by on rows. 
+        column2: String, default:None
+            Column name to be grouped by on columns.
+        column3: String, default:None
+            Column name to be calculated its mean. 
+        order_column1: list of String, optional, default:None
+            List of unique elements in column1.  
+            Rows are ordered as specified. 
+        order_column2: list of String, optional, default:None
+            List of unique elements in column2.  
+            Columns are ordered as specified. 
+
+    Returns:
+        merged_df: Dataframe
+            Dataframe of mean of elements in unique elements in column1 versus unique elements in column2. 
+            The rows and columns are ordered as specified. 
+    """
+    list_df = list()
+    for i in data[column2].unique():
+        df = (
+            mean_category(data = data[data[column2] == i], column = column1)
+            .loc[:,[column1, column3]]
+            .rename(columns={column3:i})
+        )
+        list_df.append(df)
+        
+    merged_df = list_df[0]
+    for i in list_df[1:]:
+        merged_df = pd.merge(merged_df, i, how='outer')
+    
+    merged_df = (
+        merged_df.set_index(keys=column1)
+                 .reindex(index=order_column1)
+                 .reindex(columns=order_column2)
+                 .reset_index()
+    )
+    return merged_df
+
+
+def mean_melt(data=None, column1=None, column2=None, column3=None, 
+               order_column1=None, order_column2=None, ):
+    """
+    This function creates melt version of count_category_groupby(). 
+
+    Args:
+        data: Dataframe, default:None
+            Dataframe to be considered. 
+        column1: String, default:None
+            Column name to be grouped by on second column. 
+        column2: String, default:None
+            Column name to be grouped by on first column.
+        column3: String, default:None
+            Column name to be calculated its mean. 
+        order_column1: list of String, optional, default:None
+            List of unique elements in column1.  
+            second column is ordered as specified. 
+        order_column2: list of String, optional, default:None
+            List of unique elements in column2.  
+            Columns are ordered as specified. 
+    """
+    df = mean_category_groupby(data, column2, column1, column3, order_column2, order_column1)
+    df = (
+        pd.melt(df, id_vars=[column2])
+          .rename(columns = {'variable':column1, 'value':'mean'})
+          .reindex(columns = [column1, column2, 'mean'])
+    )
+    return df
+
