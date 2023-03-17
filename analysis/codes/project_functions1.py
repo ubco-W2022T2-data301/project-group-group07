@@ -3,7 +3,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def loadProcessRegion(path, regionName):
+def load_process_region(path, regionName):
   """
   Load the data from the given path and process the data based on the given region. After processing, it returns the dataframe of the count by each company size.
   Args:
@@ -22,5 +22,6 @@ def loadProcessRegion(path, regionName):
     .count()
     .reset_index()
     .rename(columns={"company_region":"count"})
+    .assign(company_region = regionName)
   )
   return dfRegion
