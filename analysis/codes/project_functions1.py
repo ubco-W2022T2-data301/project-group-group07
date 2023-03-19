@@ -23,5 +23,6 @@ def load_process_region(path, regionName):
     .reset_index()
     .rename(columns={"company_region":"count"})
     .assign(company_region = regionName)
+    .assign(percentage=lambda x: (x["count"] / sum(x["count"]) * 100))
   )
   return dfRegion
