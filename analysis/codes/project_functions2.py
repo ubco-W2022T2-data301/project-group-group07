@@ -6,7 +6,7 @@ import seaborn as sns
 def load_and_process(path, dfname):
 
     df1 = (
-    pd.read_csv("../data/processed/ds_salaries_1.csv")
+    pd.read_csv(path)
     .drop(columns=['work_year', 'employment_type', 'job_title', 'employee_residence', 'company_size', 'experience_level','salary_currency', 'salary'])
     .loc[lambda df: df["company_region"] == dfname]
       )
