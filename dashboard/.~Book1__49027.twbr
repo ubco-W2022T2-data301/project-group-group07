@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0209.1653                               -->
+<workbook locale='en_CA' original-version='18.1' source-build='2022.4.1 (20224.23.0209.1653)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='ds_salaries_2' inline='true' name='federated.0xc3frk13bis5a10ogp471kr51yu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ds_salaries_2' name='textscan.06mj38z0nve5r518bkkbl0ee3e3p'>
+            <connection class='textscan' directory='/Users/taiihirano/Documents/DATA301/project-group-group07/data/processed' filename='ds_salaries_2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.06mj38z0nve5r518bkkbl0ee3e3p' name='ds_salaries_2.csv' table='[ds_salaries_2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+            <column datatype='integer' name='work_year' ordinal='0' />
+            <column datatype='string' name='experience_level' ordinal='1' />
+            <column datatype='string' name='employment_type' ordinal='2' />
+            <column datatype='string' name='job_title' ordinal='3' />
+            <column datatype='integer' name='salary' ordinal='4' />
+            <column datatype='string' name='employee_residence' ordinal='5' />
+            <column datatype='integer' name='remote_ratio' ordinal='6' />
+            <column datatype='string' name='company_location' ordinal='7' />
+            <column datatype='string' name='company_size' ordinal='8' />
+            <column datatype='string' name='company_region' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.06mj38z0nve5r518bkkbl0ee3e3p' name='ds_salaries_2.csv' table='[ds_salaries_2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+            <column datatype='integer' name='work_year' ordinal='0' />
+            <column datatype='string' name='experience_level' ordinal='1' />
+            <column datatype='string' name='employment_type' ordinal='2' />
+            <column datatype='string' name='job_title' ordinal='3' />
+            <column datatype='integer' name='salary' ordinal='4' />
+            <column datatype='string' name='employee_residence' ordinal='5' />
+            <column datatype='integer' name='remote_ratio' ordinal='6' />
+            <column datatype='string' name='company_location' ordinal='7' />
+            <column datatype='string' name='company_size' ordinal='8' />
+            <column datatype='string' name='company_region' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ja&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ja_JP&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>work_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[work_year]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>work_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>experience_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[experience_level]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>experience_level</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_type]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>employment_type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>job_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[job_title]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>job_title</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[salary]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>salary</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employee_residence</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employee_residence]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>employee_residence</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remote_ratio</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[remote_ratio]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>remote_ratio</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_location]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>company_location</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_size]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>company_size</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_region]</local-name>
+            <parent-name>[ds_salaries_2.csv]</parent-name>
+            <remote-alias>company_region</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='ds_salaries_2.csv' datatype='table' name='[__tableau_internal_object_id__].[ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F]' role='measure' type='quantitative' />
+      <column caption='Company Location' datatype='string' name='[company_location]' role='dimension' type='nominal' />
+      <column caption='Company Region' datatype='string' name='[company_region]' role='dimension' type='nominal' />
+      <column caption='Company Size' datatype='string' name='[company_size]' role='dimension' type='nominal' />
+      <column caption='Employee Residence' datatype='string' name='[employee_residence]' role='dimension' type='nominal' />
+      <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+      <column caption='Experience Level' datatype='string' name='[experience_level]' role='dimension' type='nominal' />
+      <column caption='Job Title' datatype='string' name='[job_title]' role='dimension' type='nominal' />
+      <column caption='Remote Ratio' datatype='integer' name='[remote_ratio]' role='measure' type='quantitative' />
+      <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+      <column caption='Work Year' datatype='integer' name='[work_year]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Japan&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='ds_salaries_2.csv' id='ds_salaries_2.csv_23979D516D23407FAF88B0883DDB9A5F'>
+            <properties context=''>
+              <relation connection='textscan.06mj38z0nve5r518bkkbl0ee3e3p' name='ds_salaries_2.csv' table='[ds_salaries_2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+                  <column datatype='integer' name='work_year' ordinal='0' />
+                  <column datatype='string' name='experience_level' ordinal='1' />
+                  <column datatype='string' name='employment_type' ordinal='2' />
+                  <column datatype='string' name='job_title' ordinal='3' />
+                  <column datatype='integer' name='salary' ordinal='4' />
+                  <column datatype='string' name='employee_residence' ordinal='5' />
+                  <column datatype='integer' name='remote_ratio' ordinal='6' />
+                  <column datatype='string' name='company_location' ordinal='7' />
+                  <column datatype='string' name='company_size' ordinal='8' />
+                  <column datatype='string' name='company_region' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Company Region by Company Size'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Employee by Country Region Split by Company Size</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ds_salaries_2' name='federated.0xc3frk13bis5a10ogp471kr51yu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xc3frk13bis5a10ogp471kr51yu'>
+            <column-instance column='[company_region]' derivation='Count' name='[cnt:company_region:qk]' pivot='key' type='quantitative' />
+            <column caption='Company Region' datatype='string' name='[company_region]' role='dimension' type='nominal' />
+            <column caption='Company Size' datatype='string' name='[company_size]' role='dimension' type='nominal' />
+            <column-instance column='[company_region]' derivation='None' name='[none:company_region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[company_size]' derivation='None' name='[none:company_size:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_region:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;North America&quot;</bucket>
+              <bucket>&quot;Europe&quot;</bucket>
+              <bucket>&quot;Asia&quot;</bucket>
+              <bucket>&quot;Latin America&quot;</bucket>
+              <bucket>&quot;Middle East&quot;</bucket>
+              <bucket>&quot;Oceania&quot;</bucket>
+              <bucket>&quot;Africa&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0xc3frk13bis5a10ogp471kr51yu].[cnt:company_region:qk]' scope='rows' value='Number of Employee' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_size:nk]' value='32' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#499894' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc3frk13bis5a10ogp471kr51yu].[cnt:company_region:qk]</rows>
+        <cols>([federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_region:nk] / [federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_size:nk])</cols>
+      </table>
+      <simple-id uuid='{352677E4-01EE-4D49-84F9-9ED5B9AA7AC1}' />
+    </worksheet>
+    <worksheet name='Experience Level by Company Size'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Employee by Company Size Split by Experience Level</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ds_salaries_2' name='federated.0xc3frk13bis5a10ogp471kr51yu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xc3frk13bis5a10ogp471kr51yu'>
+            <column-instance column='[company_size]' derivation='Count' name='[cnt:company_size:qk]' pivot='key' type='quantitative' />
+            <column caption='Company Size' datatype='string' name='[company_size]' role='dimension' type='nominal' />
+            <column caption='Experience Level' datatype='string' name='[experience_level]' role='dimension' type='nominal' />
+            <column-instance column='[company_size]' derivation='None' name='[none:company_size:nk]' pivot='key' type='nominal' />
+            <column-instance column='[experience_level]' derivation='None' name='[none:experience_level:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:experience_level:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;EN&quot;</bucket>
+              <bucket>&quot;MI&quot;</bucket>
+              <bucket>&quot;SE&quot;</bucket>
+              <bucket>&quot;EX&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0xc3frk13bis5a10ogp471kr51yu].[cnt:company_size:qk]' scope='rows' value='Number of Employee' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#499894' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc3frk13bis5a10ogp471kr51yu].[cnt:company_size:qk]</rows>
+        <cols>([federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_size:nk] / [federated.0xc3frk13bis5a10ogp471kr51yu].[none:experience_level:nk])</cols>
+      </table>
+      <simple-id uuid='{BF2B1EAC-3765-4A54-A313-15F79DBAB8C0}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Salary Level of North America by Experience Level split by Company Size</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ds_salaries_2' name='federated.0xc3frk13bis5a10ogp471kr51yu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xc3frk13bis5a10ogp471kr51yu'>
+            <column caption='Company Size' datatype='string' name='[company_size]' role='dimension' type='nominal' />
+            <column caption='Experience Level' datatype='string' name='[experience_level]' role='dimension' type='nominal' />
+            <column-instance column='[company_size]' derivation='None' name='[none:company_size:nk]' pivot='key' type='nominal' />
+            <column-instance column='[experience_level]' derivation='None' name='[none:experience_level:nk]' pivot='key' type='nominal' />
+            <column-instance column='[salary]' derivation='None' name='[none:salary:qk]' pivot='key' type='quantitative' />
+            <column caption='Salary' datatype='integer' name='[salary]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:experience_level:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;EN&quot;</bucket>
+              <bucket>&quot;MI&quot;</bucket>
+              <bucket>&quot;SE&quot;</bucket>
+              <bucket>&quot;EX&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <reference-line axis-column='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:salary:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0xc3frk13bis5a10ogp471kr51yu].[none:salary:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#499894' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xc3frk13bis5a10ogp471kr51yu].[none:salary:qk]</rows>
+        <cols>([federated.0xc3frk13bis5a10ogp471kr51yu].[none:experience_level:nk] / [federated.0xc3frk13bis5a10ogp471kr51yu].[none:company_size:nk])</cols>
+      </table>
+      <simple-id uuid='{DB2C7D22-6D39-4E0A-9F1F-FE391DDE01C6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Experience Level by Company Size'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{22DC3DAE-0672-4CFB-BB6F-E3164A16B406}' />
+    </window>
+    <window class='worksheet' name='Company Region by Company Size'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{933A90C8-C58B-4340-9908-6CCE280476A1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D49789E9-A9B5-4FE7-AA97-3FEB854416F3}' />
+    </window>
+  </windows>
+</workbook>
