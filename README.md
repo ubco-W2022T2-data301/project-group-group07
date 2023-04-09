@@ -35,9 +35,19 @@ Our overall speculation of this dataset is that several factors, such as company
 
 ## Images
 
-{You should use this area to add a screenshot of an interesting plot, or of your dashboard}
+### Dashboard 1
 
-<img src ="images/test.png" width="100px">
+<img src ="images/dashboard1.png" width="300">
+
+### Dashboard 2
+
+<img src ="images/dashboard2_1.png" width="300">
+<img src ="images/dashboard2_2.png" width="300">
+
+### Dashboard 3
+
+<img src ="images/dashboard3_1.png" width="300">
+<img src ="images/dashboard3_2.png" width="300">
 
 ## References
 
