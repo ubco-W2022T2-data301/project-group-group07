@@ -14,6 +14,8 @@ For each research question, we have three different highlights.
 
 ## **Research Question 1 and Results: What is the best company size in North America for each experience level based on their salary?**
 
+- Full analysis notebook: [link](https://github.com/ubco-W2022T2-data301/project-group-group07/blob/main/analysis/analysis1.ipynb)
+
 To address this research question, I divided it into three sub-questions.
 
 ### *1.1: Which experience level workers are hired in each company size?*
@@ -45,6 +47,8 @@ In conclusion, based on the results, I recommend medium-sized companies in North
 
 ## **Research Question 2 and Results: What are the salary levels of workers in the United States and Canada?**
 
+- Full analysis notebook: [link](https://github.com/ubco-W2022T2-data301/project-group-group07/blob/main/analysis/analysis2.ipynb)
+
 I have added few sub questions in relation to my main research question:  
 
 - In comparison to workers in these North American countries, how much do workers in other countries earn?  
@@ -74,6 +78,8 @@ In Europe and North America, a combination of in-person and remote work results 
 In conclusion, with the assumption that this dataset is heavily skewed towards the United States, it can be said that United States offers the highest average salary levels, and therefore, would be recommended for other data science students to find a job in the United States.  
 
 ## **Research Question 3 and Results: Does Remote Working Provide a Positive Impact on the Salary of Employees?**
+
+- Full analysis notebook: [link](https://github.com/ubco-W2022T2-data301/project-group-group07/blob/main/analysis/analysis3.ipynb)
 
 The COVID-19 pandemic has brought attention to the advantages of remote work. However, recent studies suggest that the effectiveness and productivity of remote work largely depend on individual workers' skills.  
 In this research project, I analyzed the correlation between the ratio of remote work and the salary and in which condition it works more effectively. This analysis is under the assumption that a higher salary indicates better job performance. Although salary alone is not an absolute measure of success, as there are limited criteria in this dataset, I used it as a clear indicator of job success.  
